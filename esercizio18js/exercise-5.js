@@ -1,6 +1,14 @@
 function memoize(fn) {
   let cache = {};
-  // ...
+ return function (n) {
+   if(fn(n) in cache){
+     return fn(n)
+
+   }
+   else{
+   return cache.factor=fn(n)
+   }
+ }
 }
 
 function factorial(x) {
