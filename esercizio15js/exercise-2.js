@@ -1,5 +1,5 @@
 function pow(base) {
-  // ...
+  return numero =>  `${base}  `** ` ${numero} `
 }
 
 const pow2 = pow(2);
