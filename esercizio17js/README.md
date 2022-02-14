@@ -1,14 +1,16 @@
-# Closure - Exercise 1
-Implementare la funzione `greet` che accetta come argomento un saluto (`greeting`) e restituisce una closure che si occupa di concatenare il saluto passato come parametro con il nome della persona da salutare
+# Closure - Exercise 4
+Implementare la funzione `calculate` che restituisce un oggetto che dia la possibilità di eseguire le quattro operazioni matematiche (somma, sottrazione, moltiplicazione e divisione) su uno stesso numero e infine consente di stamparne il risultato.
+
+**TIP**: Per concatenare i metodi basta restituire il riferimento all'oggetto stesso (`$this`)
 
 Esempio:
 ```
-const greetWithHello = greet('Hello'); // Hello
-const greetWithBye = greet('Bye'); // Bye
-const greetWithHi = greet('Hi'); // Hi
-
-const greetPaulWithHello = greetWithHello('Paul'); // Hello, Paul
-const greetPaulWithHi = greetWithHi('Paul'); // Hi, Paul
-const greetJohnWithBye = greetWithBye('John'); // Bye, John
-const greetSimonWithHello = greetWithHello('Simon'); // Hello, Simon
+calculator
+  .add(2) // 2
+  .add(4) // 6
+  .multiply(3) // 18
+  .sub(1) // 17
+  .sub(3) // 14
+  .divide(2) // 7
+  .printResult();
 ```
