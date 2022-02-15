@@ -6,4 +6,4 @@ const person = {
 
 Object.values(person).forEach((valore) => console.log( `${valore} `))
 
-// Print values of person using Object.values
+// Print values of person using Object.values  
