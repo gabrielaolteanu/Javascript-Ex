@@ -18,17 +18,18 @@ class Circle {
 }
 
 class AreaCalculator {
-  static calculate(area){
-switch(area) {
-  case square :
-    return square.side * square.side;
-  case rectangle :
-    return rectangle.width * rectangle.height ;
-    case circle :
-      return circle.radius * 2 * 3.14
-}
+
+  static calculate(figura) {
+    if (figura instanceof Square) {
+      return figura.side*figura.side
+    } else if ( figura instanceof Rectangle){
+      return figura.width * figura.height
+    } else if (figura instanceof Circle){
+      return figura.radius * 2 * 3.14
+    }
+   }
   }
-}
+
 
 const square = new Square(4);
 const rectangle = new Rectangle(4, 2);
