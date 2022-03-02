@@ -19,8 +19,19 @@ const persons = [
   }
 ];
 
-function fetchPersonById(id) {
-  // code here
-}
+const jobs = [
+  {
+    id: 1,
+    jobTitle: 'CEO'
+  },
+  {
+    id: 2,
+    jobTitle: 'Project Manager'
+  },
+  {
+    id: 3,
+    jobTitle: 'Developer'
+  }
+];
 
-// code here
+// core here
