@@ -1,5 +1,4 @@
-const persons = [
-  {
+const persons = [{
     id: 1,
     firstName: 'Mario',
     lastName: 'Rossi',
@@ -19,8 +18,7 @@ const persons = [
   }
 ];
 
-const jobs = [
-  {
+const jobs = [{
     id: 1,
     jobTitle: 'CEO'
   },
@@ -35,3 +33,34 @@ const jobs = [
 ];
 
 // core here
+const fetchPersonById = (id) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const person = persons.find(item => item.id === id);
+
+      if (person) {
+        return resolve(person.firstName + " " + person.lastName);
+      }
+
+      return reject(`Person with id: ${id} doesn't exist`);
+    }, 2000);
+  });
+}
+
+const fetchJobById = (id) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const job = jobs.find(item => item.id === id);
+
+      if (job) {
+        return resolve(job.jobTitle);
+      }
+
+      return reject(`Person with id: ${id} doesn't exist`);
+    }, 3000);
+  });
+}
+
+Promise.all([fetchPersonById(1), fetchJobById(1)]).then((values) => {
+  console.log(values)
+})
