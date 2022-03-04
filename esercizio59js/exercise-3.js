@@ -1,5 +1,4 @@
-const persons = [
-  {
+const persons = [{
     id: 1,
     firstName: 'Mario',
     lastName: 'Rossi',
@@ -23,7 +22,7 @@ function fetchPersonById(id) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const person = persons.find(item => item.id === id);
-      
+
       if (person) {
         return resolve(JSON.stringify(person));
       }
@@ -33,4 +32,6 @@ function fetchPersonById(id) {
   });
 }
 
-// core here
+fetchPersonById(1).then((result) => {
+  console.log(JSON.parse(result))
+})
